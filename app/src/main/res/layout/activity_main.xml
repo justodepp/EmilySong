@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView android:id="@+id/coverart" 
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/images"
+        android:contentDescription="@string/cover" />
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="openFB"
+        android:text="@string/button1"
+        android:background="#3b5998"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openBC"
+        android:text="@string/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/facebook"
+        android:background="#FF8040"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_marginLeft="8dp" />
+    
+    <ScrollView 
+        android:id="@+id/scrolly"
+        android:layout_below="@id/coverart"  
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/facebook" >
+        
+	    <TextView
+	        android:id="@+id/textView1"  
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"	        
+	        android:text="@string/lyrics"
+	        style="@style/LyricsText" />
+    </ScrollView>
+    
+
+</RelativeLayout>
